@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308113133) do
+ActiveRecord::Schema.define(version: 20150404161714) do
 
   create_table "bookings", force: true do |t|
     t.date     "bdateMade"
@@ -143,6 +143,8 @@ ActiveRecord::Schema.define(version: 20150308113133) do
     t.integer  "category_id"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "manufacturer"
+    t.string   "category"
   end
 
   add_index "restaurants", ["category_id"], name: "index_restaurants_on_category_id"
@@ -199,6 +201,8 @@ ActiveRecord::Schema.define(version: 20150308113133) do
     t.string   "password"
     t.boolean  "email_confirmed", default: false
     t.string   "confirm_token"
+    t.string   "address"
+    t.string   "payment"
   end
 
   create_table "userves", force: true do |t|

@@ -70180,3 +70180,4497 @@ ActionController::RoutingError (No route matches [GET] "/images/test"):
 
 Started GET "/assets/munch.JPG" for 127.0.0.1 at 2015-04-04 16:38:31 +0100
   [1m[36mSQL (15.7ms)[0m  [1mDELETE FROM "restaurants"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-04 16:55:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.2) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.2) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAddressToUsers (20150404155257)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "users" ADD "address" varchar(255)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404155257"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddPaymentMethodToUsers (20150404155352)
+  [1m[35m (15.6ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "users" ADD "payment" varchar(255)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404155352"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookings_on_user_id_and_restaurant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookings_on_user_id_and_restaurant_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_restaurants_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_restaurants_on_category_id' AND type='index'
+
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2015-04-04 16:57:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1  [["user_id", 11]]
+  Rendered restaurants/index.html.erb within layouts/application (60.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1  [["user_id", 11]]
+Completed 200 OK in 1201ms (Views: 1092.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 16:57:39 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 16:57:39 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:40 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:41 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (190.5ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 16:57:42 +0100
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2015-04-04 16:57:53 +0100
+Processing by RestaurantsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered restaurants/_form.html.erb (58.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (66.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+Completed 200 OK in 709ms (Views: 702.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:54 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:55 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (171.2ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 16:57:56 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 16:57:57 +0100
+
+
+Started GET "/signout" for 127.0.0.1 at 2015-04-04 16:58:10 +0100
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 16:58:10 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 728ms (Views: 726.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:11 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:12 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:13 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 16:58:13 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 16:58:16 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 16:58:16 +0100
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 16:58:18 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (51.5ms)
+  Rendered users/new.html.erb within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (undefined method `PaymentMethod' for #<User:0x4353390>):
+    63: 	 <div class="field">
+    64:       <%= f.label :paymentMethod %>
+    65:       <br/>
+    66:       <%= f.select :PaymentMethod, ["Visa", "MasterCard" , "Debit Card"] %>
+    67:     </div>
+    68: 	
+    69: 	
+  app/views/users/_form.html.erb:66:in `block in _app_views_users__form_html_erb___139811248_35476548'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb___139811248_35476548'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___717062754_35358228'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 16:58:35 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `paymentMethod' for #<User:0x584cb20>):
+    63: 	 <div class="field">
+    64:       <%= f.label :paymentMethod %>
+    65:       <br/>
+    66:       <%= f.select :paymentMethod, ["Visa", "MasterCard" , "Debit Card"] %>
+    67:     </div>
+    68: 	
+    69: 	
+  app/views/users/_form.html.erb:66:in `block in _app_views_users__form_html_erb___139811248_46332096'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb___139811248_46332096'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___717062754_35358228'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.1ms)
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 16:59:40 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `paymentmethod' for #<User:0x4441cf8>):
+    63: 	 <div class="field">
+    64:       <%= f.label :paymentmethod %>
+    65:       <br/>
+    66:       <%= f.select :paymentmethod, ["Visa", "MasterCard" , "Debit Card"] %>
+    67:     </div>
+    68: 	
+    69: 	
+  app/views/users/_form.html.erb:66:in `block in _app_views_users__form_html_erb___139811248_35919408'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb___139811248_35919408'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___717062754_35358228'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 17:00:48 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.0ms)
+  Rendered users/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `paymentmethod' for #<User:0x4280970>):
+    63:    <div class="field">
+    64:       <%= f.label :paymentmethod %>
+    65:       <br>
+    66:       <%= f.text_field :paymentmethod %>
+    67:     </div>
+    68: 
+    69: 	
+  app/views/users/_form.html.erb:66:in `block in _app_views_users__form_html_erb___139811248_35195892'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb___139811248_35195892'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___717062754_35358228'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 17:03:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (47.0ms)
+  Rendered users/new.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 1138ms (Views: 1098.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:57 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:58 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.4ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:03:59 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:04:00 +0100
+
+
+Started GET "/assets/images/cap.JPG" for 127.0.0.1 at 2015-04-04 17:04:00 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/cap.JPG"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-04-04 17:04:57 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "user"=>{"fname"=>"dalal", "lname"=>"Alnasrallah", "email"=>"dalal.alnasrallah@hotmail.com", "address"=>"leopardstown Central Park Vantage Apartments", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"18-04-2015", "gender"=>"Female", "payment"=>"Debit Card", "number"=>"0871938902"}, "tcCheck"=>"on", "commit"=>"Sign Up"}
+Unpermitted parameters: address, password_confirmation, payment
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."title" = 'user'  ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "users" ("confirm_token", "created_at", "dob", "email", "fname", "gender", "lname", "number", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["confirm_token", "EHRf-fHhalJrYPCyuTNGqQ"], ["created_at", "2015-04-04 16:04:57.336835"], ["dob", "2015-04-18"], ["email", "dalal.alnasrallah@hotmail.com"], ["fname", "dalal"], ["gender", "Female"], ["lname", "Alnasrallah"], ["number", "0871938902"], ["password_digest", "$2a$10$K48juLT9u14rC/pNPnme1OChGE4XnNKk5nvI5Zvp9rMWrpv5O2Epu"], ["updated_at", "2015-04-04 16:04:57.336835"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/registration_confirmation.html.erb (0.0ms)
+  Rendered user_mailer/registration_confirmation.text.erb (1.0ms)
+
+UserMailer#registration_confirmation: processed outbound mail in 102.4ms
+
+Sent mail to dalal.alnasrallah@hotmail.com (2863.7ms)
+Date: Sat, 04 Apr 2015 17:04:57 +0100
+From: e7jizli@gmail.com
+To: dalal <dalal.alnasrallah@hotmail.com>
+Message-ID: <55200ba97e3c2_18c0f408b465912@Lenovo-PC.mail>
+Subject: Registration Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_55200ba973ff5_18c0f408b4658ce";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55200ba973ff5_18c0f408b4658ce
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+HI  dalal,
+
+         Thank you for registering!!!!! Please confirm your registration by clicking on this link
+
+<a href="http://localhost:3000/users/34/EHRf-fHhalJrYPCyuTNGqQ">Confirmation Link</a>
+
+Enjoy E7jizli!!!!!!!! Be happy ok? Ok.
+----==_mimepart_55200ba973ff5_18c0f408b4658ce
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+HI  dalal,
+
+         Thank you for registering!!!! Please confirm your registration by clicking on this link
+
+<a href="http://localhost:3000/users/34/EHRf-fHhalJrYPCyuTNGqQ">Confirmation Link</a>
+
+Enjoy E7jizli!!!!!!!! Be happy ok? Ok.
+
+----==_mimepart_55200ba973ff5_18c0f408b4658ce--
+
+  [1m[35mRoleUser Load (1.0ms)[0m  SELECT  "role_users".* FROM "role_users"  WHERE "role_users"."user_id" = ? LIMIT 1  [["user_id", 34]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.0ms)[0m  INSERT INTO "role_users" ("created_at", "role_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2015-04-04 16:05:00.428502"], ["role_id", 12], ["updated_at", "2015-04-04 16:05:00.428502"], ["user_id", 34]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/34
+Completed 302 Found in 3247ms (ActiveRecord: 43.7ms)
+
+
+Started GET "/users/34" for 127.0.0.1 at 2015-04-04 17:05:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 34]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 648ms (Views: 640.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:02 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.2ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:04 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:04 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:04 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:04 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:05:10 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 687ms (Views: 684.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:11 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:12 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.1ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:13 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:14 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:14 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:05:25 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"dalal", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."fname" = 'dalal' LIMIT 1[0m
+  Rendered sessions/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 729ms (Views: 629.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:26 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:27 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.9ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:28 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:29 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:05:31 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 622ms (Views: 620.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:33 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.8ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:35 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:35 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:35 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:35 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:05:42 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"dalal", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'dalal' LIMIT 1
+  Rendered sessions/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 727ms (Views: 633.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:43 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:43 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:43 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:44 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:45 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.1ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:46 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:46 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:46 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:46 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:05:49 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 642ms (Views: 640.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:51 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (162.1ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:05:52 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:05:53 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:05:53 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:06:02 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"dalal", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."fname" = 'dalal' LIMIT 1[0m
+  Rendered sessions/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 721ms (Views: 626.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:03 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:04 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.6ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:06:05 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:06:12 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 641ms (Views: 638.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:06:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:14 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:06:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.4ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:06:16 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:06:16 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:06:16 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:06:16 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:06:26 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"dalal", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'dalal' LIMIT 1
+  Rendered sessions/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 721ms (Views: 625.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:27 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:28 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:29 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.9ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:06:30 +0100
+
+
+Started GET "/users/new/" for 127.0.0.1 at 2015-04-04 17:06:34 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 660ms (Views: 656.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:35 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:06:35 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:36 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.3ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:06:38 +0100
+
+
+Started GET "/assets/images/cap.JPG" for 127.0.0.1 at 2015-04-04 17:06:39 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/cap.JPG"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (36.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-04-04 17:07:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "user"=>{"fname"=>"ok", "lname"=>"ok", "email"=>"ok@hotmail.com", "address"=>"ok", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"", "gender"=>"Male", "payment"=>"Visa", "number"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: address, password_confirmation, payment
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."title" = 'user'  ORDER BY "roles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "users" ("confirm_token", "created_at", "email", "fname", "gender", "lname", "number", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["confirm_token", "Ys81sKO1XmvRBhPsM566tA"], ["created_at", "2015-04-04 16:07:15.944599"], ["email", "ok@hotmail.com"], ["fname", "ok"], ["gender", "Male"], ["lname", "ok"], ["number", ""], ["password_digest", "$2a$10$EHfsIu8L1dHN11KAycpRSeuvhNofqlD9T2ejeX.8MVtfZLi5AXCPC"], ["updated_at", "2015-04-04 16:07:15.944599"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+  Rendered user_mailer/registration_confirmation.html.erb (0.0ms)
+  Rendered user_mailer/registration_confirmation.text.erb (0.0ms)
+
+UserMailer#registration_confirmation: processed outbound mail in 30.0ms
+
+Sent mail to ok@hotmail.com (2175.9ms)
+Date: Sat, 04 Apr 2015 17:07:16 +0100
+From: e7jizli@gmail.com
+To: ok <ok@hotmail.com>
+Message-ID: <55200c3463a_18c0f408b466194@Lenovo-PC.mail>
+Subject: Registration Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_55200c33f3107_18c0f408b46608d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55200c33f3107_18c0f408b46608d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+HI  ok,
+
+         Thank you for registering!!!!! Please confirm your registration by clicking on this link
+
+<a href="http://localhost:3000/users/35/Ys81sKO1XmvRBhPsM566tA">Confirmation Link</a>
+
+Enjoy E7jizli!!!!!!!! Be happy ok? Ok.
+----==_mimepart_55200c33f3107_18c0f408b46608d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+HI  ok,
+
+         Thank you for registering!!!! Please confirm your registration by clicking on this link
+
+<a href="http://localhost:3000/users/35/Ys81sKO1XmvRBhPsM566tA">Confirmation Link</a>
+
+Enjoy E7jizli!!!!!!!! Be happy ok? Ok.
+
+----==_mimepart_55200c33f3107_18c0f408b46608d--
+
+  [1m[36mRoleUser Load (0.0ms)[0m  [1mSELECT  "role_users".* FROM "role_users"  WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 35]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO "role_users" ("created_at", "role_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-04-04 16:07:18.185945"], ["role_id", 12], ["updated_at", "2015-04-04 16:07:18.185945"], ["user_id", 35]]
+  [1m[35m (15.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/35
+Completed 302 Found in 2381ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2015-04-04 17:07:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 35]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 641ms (Views: 636.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:20 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.2ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:07:21 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:07:22 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:07:25 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 600ms (Views: 599.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:26 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:27 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.7ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:07:28 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:07:29 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:07:29 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:07:37 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"ok", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'ok' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 808ms (Views: 713.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:07:38 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:39 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (31.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (175.6ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:07:40 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:07:41 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:07:41 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:07:41 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:07:47 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"ok", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'ok' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 35 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1  [["user_id", 35]]
+Completed 200 OK in 742ms (Views: 646.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:47 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:48 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:49 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (167.9ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:07:50 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:07:51 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:07:51 +0100
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2015-04-04 17:07:57 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 35]]
+  Rendered restaurants/index.html.erb within layouts/application (6.7ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 35 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 35]]
+Completed 200 OK in 671ms (Views: 649.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:07:58 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:07:59 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (191.5ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:08:00 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:08:01 +0100
+
+
+Started GET "/signout" for 127.0.0.1 at 2015-04-04 17:11:10 +0100
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 35]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 35 LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-04-04 17:11:10 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 699ms (Views: 696.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:11:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:12 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.1ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:11:13 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:11:14 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:11:23 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"admin", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'admin' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 724ms (Views: 623.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:24 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:25 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (144.7ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:11:26 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:11:27 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:11:27 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-04 17:11:28 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BD2KU4rU4Juf2Uzf+egHH+TGe3nxrbjS8yVAP55YaOw=", "fname"=>"admin", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."fname" = 'admin' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1  [["user_id", 11]]
+Completed 200 OK in 727ms (Views: 629.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:29 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:30 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:11:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.2ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:11:32 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:11:32 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:11:32 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:11:32 +0100
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2015-04-04 17:11:42 +0100
+Processing by RestaurantsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered restaurants/_form.html.erb (13.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.8ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+Completed 200 OK in 671ms (Views: 663.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:44 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (178.5ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:11:45 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:11:46 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:11:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddManufacturerToRestaurants (20150404161645)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (6.0ms)[0m  [1mALTER TABLE "restaurants" ADD "manufacturer" varchar(255)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404161645"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddCategoryToRestaurants (20150404161714)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (8.0ms)[0m  [1mALTER TABLE "restaurants" ADD "category" varchar(255)[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404161714"]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookings_on_user_id_and_restaurant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookings_on_user_id_and_restaurant_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_restaurants_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_restaurants_on_category_id' AND type='index'
+
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2015-04-04 17:20:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered restaurants/_form.html.erb (44.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (53.9ms)
+Completed 500 Internal Server Error in 206ms
+
+ActionView::Template::Error (undefined method `manaufacturer' for #<Restaurant:0x55848a8>):
+    33: 	    <div class="field">
+    34:       <%= f.label :manufacturer %>
+    35:       <br>
+    36:       <%= f.number_field :manaufacturer %>
+    37:     </div>
+    38: 	
+    39: 	    <div class="field">
+  app/views/restaurants/_form.html.erb:36:in `block in _app_views_restaurants__form_html_erb___641893719_44955192'
+  app/views/restaurants/_form.html.erb:1:in `_app_views_restaurants__form_html_erb___641893719_44955192'
+  app/views/restaurants/new.html.erb:5:in `_app_views_restaurants_new_html_erb___648382214_44757804'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.1ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2015-04-04 17:20:49 +0100
+Processing by RestaurantsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered restaurants/_form.html.erb (3.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles" INNER JOIN "role_users" ON "roles"."id" = "role_users"."role_id" WHERE "role_users"."user_id" = ? LIMIT 1[0m  [["user_id", 11]]
+Completed 200 OK in 1009ms (Views: 1003.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/simple-sidebar.css?body=1" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/style1.css" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/datepicker.css" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/jquery-ui.css" for 127.0.0.1 at 2015-04-04 17:20:50 +0100
+
+
+Started GET "/assets/bookings.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/bootstrap2.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/caterings.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/extra.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/menu.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/menus.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/modernizr.custom.63321.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/modernizr.custom.79639.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/moneyinfos.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:51 +0100
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/restaurants.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/shopping_carts.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/jquery.validate.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/jquery.validate.additional-methods.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/javascripts/rails.validations.js" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/rails.validations.js"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.3-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.2) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.2) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.2) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.0ms)
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (197.1ms)
+
+
+Started GET "/assets/modernizr.custom.79639.js" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2015-04-04 17:20:52 +0100
+
+
+Started GET "/assets/normalize.css" for 127.0.0.1 at 2015-04-04 17:20:53 +0100
+
+
+Started GET "/assets/demo.css" for 127.0.0.1 at 2015-04-04 17:20:53 +0100

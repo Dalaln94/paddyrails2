@@ -28,6 +28,12 @@
       <br>
       <%= f.text_field :email %>
     </div>
+	
+	   <div class="field">
+      <%= f.label :address %>
+      <br>
+      <%= f.text_field :address %>
+    </div>
 
     <div class="field">
       <%= f.label :password %>
@@ -53,6 +59,14 @@
       <br/>
       <%= f.select :gender, ["Male", "Female"] %>
     </div>
+	
+	 <div class="field">
+      <%= f.label :payment %>
+      <br/>
+      <%= f.select :payment, ["Visa", "MasterCard" , "Debit Card"] %>
+    </div>
+	
+	
 
     <div class="field">
       <%= f.label :number %>

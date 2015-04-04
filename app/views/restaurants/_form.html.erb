@@ -22,11 +22,6 @@
       <br>
       <%= f.text_field :picture %>
     </div>
-    <div class="field">
-      <%= f.label :address %>
-      <br>
-      <%= f.text_field :address %>
-    </div>
 
    
     <div class="field">
@@ -34,9 +29,19 @@
       <br>
       <%= f.number_field :lowprice %>
     </div>
-    <div class="field">
-      <%= f.label :menu %>
+	
+	    <div class="field">
+      <%= f.label :manufacturer %>
       <br>
+      <%= f.number_field :manufacturer %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :category %>
+      <br>
+      <%= f.number_field :category %>
+    </div>
+
       
     <div class="actions">
       <%= f.submit %>
