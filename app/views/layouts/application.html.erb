@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dalal's Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application" %>
+
+
+
+  <%= stylesheet_link_tag "simple-sidebar" %>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/base/jquery-ui.css", "application", :media => "all" %>
+  <%= javascript_include_tag "application", "rails.validations" %>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script type="text/javascript" src="/assets/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" href="/assets/style1.css">
+  <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<head>
+</head>
+<body>
+
+<!-- Sidebar -->
+<header>
+<center> <h1> Dalal's Store </h1> </center>
+
+  <% if signed_in? %>
+      <div id="social">
+        <a href="https://twitter.com/Dalnasrallah" target="_blank">
+          <div class="twitter-hover social-slide"></div>
+        </a>
+        </a>
+        <div class="facebook-hover social-slide"></div>
+        <div class="instagram-hover social-slide"></div>
+
+        <div>
+
+          <p style="word-wrap: normal"> <h4>Welcome </h4>
+          <FONT COLOR="#397DBC"><h5 style="font-weight: bold;"><%= @current_user.fname.capitalize! %> ! </h5></FONT></p>
+          <form METHOD="LINK" ACTION="/signout">
+            <INPUT TYPE="submit" VALUE="Sign Out"/>
+          </form>
+          <br/>
+          <form METHOD="LINK" ACTION="/cart">
+            <INPUT TYPE="submit" VALUE="Shopping Cart"/>
+            <!--<INPUT TYPE="submit" onclick="$('#cart_pop').dialog();" VALUE="Shopping Cart"/>-->
+          </form>
+        </div>
+      </div>
+  <% else %>
+      <div id="social">
+        <a href="https://twitter.com" target="_blank">
+          <div class="twitter-hover social-slide"></div>
+        </a>
+        </a>
+        <div class="facebook-hover social-slide"></div>
+        <div class="instagram-hover social-slide"></div>
+        <div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+        </div>
+        <div>
+          <form METHOD="LINK" ACTION="/signin">
+            <INPUT TYPE="submit" VALUE="Sign In"/>
+          </form>
+
+          <form METHOD="LINK" ACTION="/users/new/">
+            <INPUT TYPE="submit" VALUE="Sign Up"/>
+          </form>
+        </div>
+      </div>
+  <% end %>
+</header>
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <!-- START HEADER -->
+    <!-- START MAIN NAVIGATION -->
+    <div class="menu classic sidebar-nav" id="nav-container">
+      <ul id="nav" class="menu">
+        <li>
+          <a href="/pages/home">HOME</a>
+          <ul class="sub-menu"></ul>
+        </li>
+		 <li>
+          <a href="/restaurants">Items</a>
+          <ul class="sub-menu"></ul>
+        </li>
+
+        <% if @current_user.present? %>
+            <% if @current_user.admin? %>
+                <li>
+                  <%= link_to 'Stock', new_restaurant_path %>
+                  <%= link_to 'Customers details', new_catering_path %>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
+      <!-- END MAIN NAVIGATION -->
+    </div>
+  </div>
+  <!-- END HEADER -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div id="main-content container">
+      <%= yield %>
+
+      <script type="text/javascript" src="/assets/menu.js"></script>
+      <script type="text/javascript">
+          $( document ).ready(function() {
+
+              $(function() {
+
+                  Menu.init();
+              });
+          });
+      </script>
+
+
+    </div>
+  </div>
+  <div id="push"></div>
+</div>
+
+<footer id="footer">
+  <footer id="innerFooter">
+    <div class="splitter"></div>
+    <ul>
+      <li>
+        <div class="text">
+          <h4>About</h4>
+
+          <div>
+            <font color="white"> Dalal's store is an online store that offers customer a chance to shop online.
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="text">
+          <h4>Contact</h4>
+
+          <div>
+            <form action="MAILTO:dalal@hotmail.com" method="post" enctype="text/plain">
+              <form class="form">
+                <p class="name">
+                  <input type="text" name="name" id="name" placeholder="Dalal Alnas "/>
+                  <label for="name">Name</label>
+                </p>
+
+                <p class="email">
+                  <input type="text" name="email" id="email" placeholder="mail@example.com"/>
+                  <label for="email">Email</label>
+                </p>
+
+                <p class="text">
+                  <textarea name="text" id="text" placeholder="We'll get back to you ASAP"/>
+                  We'll get back to you ASAP :)
+                  </textarea>
+                </p>
+
+                <p class="submit">
+                  <input type="submit" value="Send"/>
+                </p>
+              </form>
+            </form>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="text">
+          <h4>Privacy & terms</h4>
+
+          <div>
+            <font color="white"> 
+
+              <a href="/extra/privacy/">Read more</a> </font>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="bar">
+      <div class="bar-wrap">
+        <div class="copyright">
+          E7jizli &copy; | 2014 All Rights Reserved
+        </div>
+        <ul class="links">
+          <!-- footer menu -->
+          <li>
+            <a href="/pages/home">Home</a>
+          </li>
+          <li>
+            <a href="#">License</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="/extra/adv/">Advertise</a>
+          </li>
+          <li>
+            <a href="/pages/about/">About Us</a>
+            <ul class="sub-menu"></ul>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </footer>
+  </footer>
+</body>
+<div id="cart_pop">
+</div>
+<script>
+    function remove_cart(item){
+        $.ajax({
+            url: '/shopping_carts/remove?item=' + item,
+            type: 'get',
+            dataType: "script"
+        }).success(function (script) {
+            console.log('yes')
+        });
+    }
+</script>
+</html>

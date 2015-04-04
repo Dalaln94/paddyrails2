@@ -1,0 +1,206 @@
+.rm-container {
+    width: 33%;
+    height: 700px;
+    max-width: 370px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    perspective: 1600px;
+    color: #2a323f;
+}
+
+.rm-wrapper,
+.rm-wrapper > div {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.rm-wrapper .rm-cover {
+    z-index: 100;
+    transform-origin: 0% 50%;
+    transition-delay: 0.2s;
+}
+
+.rm-wrapper .rm-middle {
+    z-index: 50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.rm-wrapper .rm-right {
+    z-index: 60;
+    transform-origin: 100% 50%;
+    transition-delay: 0s;
+}
+
+.rm-wrapper > div > div {
+    background: #fff url(../images/white_paperboard.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 30px;
+    box-shadow: 
+        inset 0 0 0 16px #fff, 
+        inset 0 0 0 17px #e6b741, 
+        inset 0 0 0 18px #fff, 
+        inset 0 0 0 19px #e6b741, 
+        inset 0 0 0 20px #fff, 
+        inset 0 0 0 21px #e6b741;
+}
+
+.rm-container .rm-front,
+.rm-container .rm-back {
+    backface-visibility: hidden;
+}
+
+.rm-container .rm-back {
+    transform: rotateY(-180deg);
+}
+
+.rm-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+}
+
+.rm-middle .rm-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0) 64%, rgba(0,0,0,0.05) 100%);
+}
+
+.rm-content {
+    padding: 20px;
+}
+
+.rm-modal {
+    position: absolute;
+    z-index: 10000;
+    width: 120%;
+    margin-left: -10%;
+    top: 50%;
+    padding: 40px;
+    background: #fff url(../images/white_paperboard.jpg);
+    box-shadow: 
+        inset 0 0 0 16px #fff, 
+        inset 0 0 0 17px #e6b741, 
+        inset 0 0 0 18px #fff, 
+        inset 0 0 0 19px #e6b741, 
+        inset 0 0 0 20px #fff, 
+        inset 0 0 0 21px #e6b741,
+        0 4px 20px rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateZ(1000px);
+}
+
+.rm-modal {
+    transition: 
+        transform 0.6s ease-in-out,
+        opacity 0.6s ease-in-out;
+}
+
+.rm-container.rm-open .rm-wrapper > div {
+    box-shadow: 0 4px 5px -3px rgba(0,0,0,0.6);
+}
+
+.rm-container.rm-open .rm-cover {
+    transform: rotateY(-180deg);
+    transition-delay: 0s;
+}
+
+.rm-container.rm-open .rm-right {
+    transform: rotateY(180deg);
+    transition-delay: 0.2s;
+}
+
+.rm-container.rm-in .rm-wrapper {
+    transform: translateZ(-500px);
+}
+
+.rm-container.rm-in .rm-cover {
+    transform: rotateY(-150deg);
+}
+ 
+.rm-container.rm-in .rm-right {
+    transform: rotateY(150deg);
+}
+
+.rm-container.rm-in .rm-cover, 
+.rm-container.rm-in .rm-right,
+.rm-container.rm-nodelay .rm-right {
+    transition-delay: 0s;
+}
+
+.rm-container.rm-in .rm-modal {
+    transform: translateZ(0px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1110px) {
+    .rm-container {
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+ 
+    .rm-container {
+        width: 100%;
+        height: auto;
+        max-width: 460px;
+    }
+	
+	.rm-wrapper, 
+.rm-wrapper > div,
+.rm-wrapper > div > div {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.rm-wrapper > div > div{
+    margin-bottom: 10px;
+    box-shadow: 
+        inset 0 0 0 16px #fff, 
+        inset 0 0 0 17px #e6b741, 
+        inset 0 0 0 18px #fff, 
+        inset 0 0 0 19px #e6b741, 
+        inset 0 0 0 20px #fff, 
+        inset 0 0 0 21px #e6b741,
+        0 3px 5px rgba(0,0,0,0.2);
+}
+
+.rm-container .rm-back,
+.rm-container.rm-open .rm-cover,
+.rm-container.rm-open .rm-right {
+    transform: rotateY(0deg);
+}
+
+.rm-overlay, .rm-middle .rm-overlay {
+    display: none;
+}
+
+.rm-container .rm-modal {
+    position: fixed;
+    width: 80%;
+    top: 100px;
+    left: 50%;
+    margin: 0 0 0 -40%;
+    transform: translateZ(0px);
+    transition: opacity 0.6s ease-in-out 0s;
+}
+
+ .rm-container.rm-in .rm-cover,
+    .rm-container.rm-in .rm-right,
+    .rm-container.rm-in .rm-wrapper {
+        transform: rotateY(0deg);
+        transition-delay: 0s;
+    }
+}

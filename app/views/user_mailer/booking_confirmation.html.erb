@@ -1,0 +1,17 @@
+YAY <%= @user.fname %>, Thanks for Booking with E7jizli.
+<br><br>
+Here are your Details.
+<br><br>
+<table>
+    <tr><td>Party of</td>       <td><%= @booking.numofpeople %></td></tr>
+    <tr><td>Event Date</td>     <td><%= @booking.beventdate %></td></tr>
+    <tr><td>Event Type</td>     <td><%= @booking.beventtype %></td></tr>
+    <tr><td>Time</td>           <td><%= @booking.bstime %></td></tr>
+    <tr><td>Restaurant Name</td><td><%= @restaurant.name %></td></tr>
+    <tr><td>Qr Code</td>        <td><%= image_tag attachments['qrcode.png'].url %></td></tr>
+</table>
+
+<br><br><br><br>
+
+Don't Forget to post a review once you've dined :)
+

@@ -1,0 +1,228 @@
+<div class="container">
+  <header>
+    <h1><%= @restaurant.name %></h1>
+  </header>
+  <!--<table>-->
+  <!--<tr>-->
+  <!--<td>-->
+  <!--<%#= @restaurant.menu.title %>-->
+  <!--</td>-->
+  <!--<td>-->
+  <!--<%#= @restaurant.menu.appetizer_1 %>-->
+  <!--<%#= @restaurant.menu.PriceAppetizer1 %>-->
+  <!--</td>-->
+  
+  <!--<td>-->
+  <!--<%#= @restaurant.menu.appetizer_2 %>-->
+  <!--</td>-->
+    <!--<td>-->
+  <!--<%#= @restaurant.menu.PriceAppetizer2 %>-->
+  <!--</td>-->
+  <!--</tr>-->
+  <!--</table>-->
+  <section class="main">
+
+    <div id="rm-container" class="rm-container">
+
+      <div class="rm-wrapper">
+
+        <div class="rm-cover">
+
+          <div class="rm-front">
+            <div class="rm-content">
+
+              <div class="rm-logo"></div>
+              <h2><%= @restaurant.name %></h2>
+
+              <h3><%= @restaurant.address %></h3>
+
+              <a href="#" class="rm-button-open">View the Menu</a>
+
+              <div class="rm-info">
+                <p>
+                  <strong><%= @restaurant.name %></strong><br>
+                  <%= @restaurant.address %> <br>
+                  <strong>Phone</strong> 90000946<br>
+              </div>
+
+            </div>
+            <!-- /rm-content -->
+          </div>
+          <!-- /rm-front -->
+
+          <div class="rm-back">
+            <div class="rm-content">
+              <h4>Appetizers</h4>
+              <% menu = @restaurant.menu %>
+              <dl>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_1 %>')"><dt><%= menu.appetizer_1 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_2 %>')"><dd><%= menu.appetizer_2 %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_3 %>')"><dd><%= menu.appetizer_3  %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_4 %>')"><dd><%= menu.appetizer_4  %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_5 %>')"><dd><%= menu.appetizer_5  %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_6 %>')"><dd><%= menu.appetizer_6  %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_7 %>')"><dd><%= menu.appetizer_7  %></dd></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.appetizer_8 %>')"><dd><%= menu.appetizer_8  %></dd></a>
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="images/1.jpg">Green-->
+                    <!--Love Crostini</a></dt>-->
+                <!--<dd>Essa Maki 2</dd>-->
+
+                <!--<dt>Nano Maki</dt>-->
+                <!--<dd>Yummy</dd>-->
+              </dl>
+
+      
+
+
+                <dt>
+              
+
+              </dl>
+            </div>
+            <!-- /rm-content -->
+            <div class="rm-overlay"></div>
+
+          </div>
+          <!-- /rm-back -->
+
+        </div>
+        <!-- /rm-cover -->
+
+        <div class="rm-middle">
+          <div class="rm-inner">
+            <div class="rm-content">
+              <h4>Main Courses</h4>
+              <dl>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_1 %>')"><dt><%= menu.maincourse_1 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_2 %>')"><dt><%= menu.maincourse_2 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_3 %>')"><dt><%= menu.maincourse_3 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_4 %>')"><dt><%= menu.maincourse_4 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_5 %>')"><dt><%= menu.maincourse_5 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_6 %>')"><dt><%= menu.maincourse_6 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_7 %>')"><dt><%= menu.maincourse_7 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.maincourse_8 %>')"><dt><%= menu.maincourse_8 %></dt></a>
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html" class="rm-viewdetails" data-thumb="images/11.jpg">Crispy-->
+                    <!--Gnocchi with Arugula</a></dt>-->
+                <!--<dd>Noodles</dd>-->
+
+                <!--<dt>Seafood Salad</dt>-->
+                <!--<dd>Salads</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/09/caviar-lentil-salad-with-arugula-crispy-shallots-and-roasted-garlic-recipe.html" class="rm-viewdetails" data-thumb="images/8.jpg">Caviar</a>-->
+                <!--</dt>-->
+                <!--<dd>Bla bla bla bla</dd>-->
+
+                <!--<dt>Tofu</dt>-->
+                <!--<dd>Wasabi emulsion, sesame seeds and scallions</dd>-->
+
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/07/king-oyster-mushroom-with-roasted-cherries-and-sage-no-that-isnt-meat-recipe-and-thought-process.html" class="rm-viewdetails" data-thumb="images/4.jpg">Luxur-->
+                    <!--Oyster</a></dt>-->
+                <!--<dd>King oyster mushroom with roasted cherries and sage</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/09/rigatoni-with-roasted-cauliflower-and-spicy-tomato-sauce-recipe.html" class="rm-viewdetails" data-thumb="images/3.jpg">Rigatoni-->
+                    <!--di Cavolfiore</a></dt>-->
+                <!--<dd>Rigatoni with roasted cauliflower and spicy tomato sauce</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/06/saffron-chickpea-stew-with-grilled-porcini-mushroom-recipe.html" class="rm-viewdetails" data-thumb="images/14.jpg">Saffron-->
+                    <!--Chana Secret</a></dt>-->
+                <!--<dd>Saffron chickpea stew with grilled porcini mushrooms</dd>-->
+              </dl>
+            </div>
+            <!-- /rm-content -->
+            <div class="rm-overlay"></div>
+          </div>
+          <!-- /rm-inner -->
+        </div>
+        <!-- /rm-middle -->
+
+        <div class="rm-right">
+
+          <div class="rm-front">
+
+          </div>
+
+          <div class="rm-back">
+            <span class="rm-close">Close</span>
+
+            <div class="rm-content">
+              <h4>Desserts</h4>
+              <dl>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_1 %>')"><dt><%= menu.dessert_1 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_2 %>')"><dt><%= menu.dessert_2 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_3 %>')"><dt><%= menu.dessert_3 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_4 %>')"><dt><%= menu.dessert_4 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_5 %>')"><dt><%= menu.dessert_5 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_6 %>')"><dt><%= menu.dessert_6 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_7 %>')"><dt><%= menu.dessert_7 %></dt></a>
+                <a href="javascript:;" onclick="order_now('<%= menu.dessert_8 %>')"><dt><%= menu.dessert_8 %></dt></a>
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/08/crepes-with-roasted-french-plums-yogurt-and-honey.html" class="rm-viewdetails" data-thumb="images/5.jpg">French-->
+                    <!--Plum Crepes</a></dt>-->
+                <!--<dd>Crepes with roasted french plums, yogurt &amp; honey</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2012/05/butterscotch-pudding-with-bittersweet-ganache-and-caramelize-white-chocolate-crunchies-recipe.html" class="rm-viewdetails" data-thumb="images/6.jpg">Butterscotch-->
+                    <!--Pudding</a></dt>-->
+                <!--<dd>Butterscotch pudding with bittersweet ganache and caramelize white chocolate crispies</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2009/12/gateaux-de-crepes-recipe.html" class="rm-viewdetails" data-thumb="images/12.jpg">Chocolate-->
+                    <!--Gâteau de Crêpes</a></dt>-->
+                <!--<dd>Gâteau de crêpes with chocolate pastry cream and dulce de leche</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2009/05/dutch-baby-with-sauteed-apples-giant-ovenbaked-pancakes-recipe.html" class="rm-viewdetails" data-thumb="images/10.jpg">Dutch-->
+                    <!--Baby With Sauteed Apples</a></dt>-->
+                <!--<dd>Dutch ginat oven-baked pancakes with sauteed apples</dd>-->
+
+                <!--<dt>-->
+                  <!--<a href="http://herbivoracious.com/2008/08/blueberry-napol.html" class="rm-viewdetails" data-thumb="images/7.jpg">Blueberry-->
+                    <!--Napoleon</a></dt>-->
+                <!--<dd>Blueberry Napoleon with crème fraîche and raspberry powder</dd>-->
+              </dl>
+            </div>
+            <!-- /rm-content -->
+          </div>
+          <!-- /rm-back -->
+
+        </div>
+        <!-- /rm-right -->
+      </div>
+      <!-- /rm-wrapper -->
+
+    </div>
+    <!-- /rm-container -->
+
+  </section>
+
+</div>
+
+<div id="order_pop" style="display: none;">
+  <a href = "javascript:;" onclick="add_to_cart()" class="tooltip-example demo-button" style="background: none repeat scroll 0 0 green;">Order Now</a>
+  <a href = "javascript:;" onclick="$('#order_pop').dialog('close');" class="tooltip-example demo-button">Cancel</a>
+  <%= hidden_field_tag :item, :value => nil %>
+</div>
+
+<script>
+  function order_now(item){
+$('#order_pop').dialog();
+      $('#item').val(item);
+  }
+
+  function add_to_cart(){
+      $.ajax({
+          url: '/shopping_carts/add?item=' + $('#item').val(),
+          type: 'get',
+          dataType: "script"
+      }).success(function (script) {
+          console.log('yes')
+      });
+  }
+</script>

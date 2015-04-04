@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@restaurant.picture, :size => '100x100') %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @restaurant.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @restaurant.longitude %>
+</p>
+
+<p>
+  <strong>Lowprice:</strong>
+  <%= @restaurant.lowprice %>
+</p>
+
+<p>
+  <strong>Highprice:</strong>
+  <%= @restaurant.highprice %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @restaurant.menu.title %>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@restaurant.latitude}%2C#{@restaurant.longitude}" %>
+
+
+<h3> Nearby Locations </h3>
+<ul>
+<% for restaurant in @restaurant.nearbys(10) %>
+    <li><%= link_to restaurant.address, restaurant %> (<%= restaurant.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

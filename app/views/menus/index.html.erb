@@ -1,0 +1,111 @@
+<h1>Listing menus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Picture</th>
+      <th>Address</th>
+      <th>Appetizer 1</th>
+      <th>Appetizer 2</th>
+      <th>Appetizer 3</th>
+      <th>Appetizer 4</th>
+      <th>Appetizer 5</th>
+      <th>Appetizer 6</th>
+      <th>Appetizer 7</th>
+      <th>Appetizer 8</th>
+      <th>Maincourse 1</th>
+      <th>Maincourse 2</th>
+      <th>Maincourse 3</th>
+      <th>Maincourse 4</th>
+      <th>Maincourse 5</th>
+      <th>Maincourse 6</th>
+      <th>Maincourse 7</th>
+      <th>Maincourse 8</th>
+      <th>Maincourse 9</th>
+      <th>Maincourse 10</th>
+      <th>Maincourse 11</th>
+      <th>Maincourse 12</th>
+      <th>Maincourse 13</th>
+      <th>Maincourse 14</th>
+      <th>Maincourse 15</th>
+      <th>Dessert 1</th>
+      <th>Dessert 2</th>
+      <th>Dessert 3</th>
+      <th>Dessert 4</th>
+      <th>Dessert 5</th>
+      <th>Dessert 6</th>
+      <th>Dessert 7</th>
+      <th>Dessert 8</th>
+      <th>Dessert 9</th>
+      <th>Dessert 10</th>
+      <th>Drinks 1</th>
+      <th>Drinks 2</th>
+      <th>Drinks 3</th>
+      <th>Drinks 4</th>
+      <th>Drinks 5</th>
+      <th>Drinks 6</th>
+      <th>Drinks 7</th>
+      <th>Drinks 8</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.title %></td>
+        <td><%= menu.picture %></td>
+        <td><%= menu.address %></td>
+        <td><%= menu.appetizer_1 %></td>
+        <td><%= menu.appetizer_2 %></td>
+        <td><%= menu.appetizer_3 %></td>
+        <td><%= menu.appetizer_4 %></td>
+        <td><%= menu.appetizer_5 %></td>
+        <td><%= menu.appetizer_6 %></td>
+        <td><%= menu.appetizer_7 %></td>
+        <td><%= menu.appetizer_8 %></td>
+        <td><%= menu.maincourse_1 %></td>
+        <td><%= menu.maincourse_2 %></td>
+        <td><%= menu.maincourse_3 %></td>
+        <td><%= menu.maincourse_4 %></td>
+        <td><%= menu.maincourse_5 %></td>
+        <td><%= menu.maincourse_6 %></td>
+        <td><%= menu.maincourse_7 %></td>
+        <td><%= menu.maincourse_8 %></td>
+        <td><%= menu.maincourse_9 %></td>
+        <td><%= menu.maincourse_10 %></td>
+        <td><%= menu.maincourse_11 %></td>
+        <td><%= menu.maincourse_12 %></td>
+        <td><%= menu.maincourse_13 %></td>
+        <td><%= menu.maincourse_14 %></td>
+        <td><%= menu.maincourse_15 %></td>
+        <td><%= menu.dessert_1 %></td>
+        <td><%= menu.dessert_2 %></td>
+        <td><%= menu.dessert_3 %></td>
+        <td><%= menu.dessert_4 %></td>
+        <td><%= menu.dessert_5 %></td>
+        <td><%= menu.dessert_6 %></td>
+        <td><%= menu.dessert_7 %></td>
+        <td><%= menu.dessert_8 %></td>
+        <td><%= menu.dessert_9 %></td>
+        <td><%= menu.dessert_10 %></td>
+        <td><%= menu.drinks_1 %></td>
+        <td><%= menu.drinks_2 %></td>
+        <td><%= menu.drinks_3 %></td>
+        <td><%= menu.drinks_4 %></td>
+        <td><%= menu.drinks_5 %></td>
+        <td><%= menu.drinks_6 %></td>
+        <td><%= menu.drinks_7 %></td>
+        <td><%= menu.drinks_8 %></td>
+        <td><%= link_to 'Show', menu %></td>
+        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Menu', new_menu_path %>

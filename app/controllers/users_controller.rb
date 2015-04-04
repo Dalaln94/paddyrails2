@@ -1,0 +1,110 @@
+class UsersController < ApplicationController
+
+  # GET /users
+  # GET /users.json
+  def index
+    @users = User.all
+  end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @user }
+
+    end
+  end
+
+
+  # GET /users/new
+  def new
+    @user = User.new
+  end
+
+  # GET /users/1/edit
+  def edit
+  end
+
+  # POST /users
+  # POST /users.json
+  def create
+    @user = User.new(user_params)
+    role = Role.where(:title => "user").first
+
+    respond_to do |format|
+      if @user.save
+        UserMailer.registration_confirmation(@user).deliver
+        @user.role = role if role.present?
+        format.html { redirect_to @user, :notice => 'User was successfully created.' }
+        format.json { render :show, :status => :created, :location => @user }
+      else
+        format.html { render :new }
+        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /users/1
+  # PATCH/PUT /users/1.json
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, :notice => 'User was successfully updated.' }
+        format.json { render :show, :status => :ok, :location => @user }
+      else
+        format.html { render :edit }
+        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /users/1
+  # DELETE /users/1.json
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy()
+    respond_to do |format|
+      format.html { redirect_to users_url, :notice => 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  # private
+  # Use callbacks to share common setup or constraints between actions.
+  #def set_user
+  #  @user = User.find(params[:fname])
+  # end
+
+  def user_params
+    params.require(:user).permit(:fname, :lname, :dob, :gender, :email, :number, :password, :loyaltypoint, :moneyinfo_id)
+  end
+  
+ def confirm_email
+    user = User.find_by_confirm_token(params[:confirm_email])
+    if user
+      email_activate(user)
+      flash[:success] = "Welcome to E7JIZLI! Your email has been confirmed.Please sign in to continue."
+      redirect_to signin_url
+    else
+      flash[:error] = "Sorry. User does not exist"
+      redirect_to root_url
+    end
+  end
+
+  def email_activate(user)
+    user.email_confirmed = true
+    user.confirm_token = nil
+    user.save!(:validate => false)
+  end
+
+
+end
+
+
+
+
+
+

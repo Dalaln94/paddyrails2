@@ -1,0 +1,94 @@
+<%= form_for(@booking) do |f| %>
+    <% if @booking.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+          <ul>
+            <% @booking.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+	<
+
+
+    <div class="field">
+      <%= f.label :numofpeople %>
+      <br>
+      <%= f.number_field :numofpeople %>
+      <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :beventdate %>
+      <br/>
+      <%= f.text_field :beventdate, :id => :datepicker %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :beventtype %>
+      <br>
+      <%= f.select :beventtype, ["Breakfast", "Lunch", "Dinner"] %>
+    </div>
+
+
+
+    <div class="field">
+      <%= f.label :bstime %>
+      <br>
+      <%= f.select :bstime, ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", "00:00"] %>
+    </div>
+
+    <% if @current_user.admin? %>
+        <div class="field">
+          <%= f.label :user_id %>
+          <br>
+          <%= f.select :user_id, options_from_collection_for_select(User.all, "id", "fname"), :include_blank => "-- Select One --" %>
+        </div>
+    <% end %>
+    <% if params[:type] == 'dine' %>
+        <div class="field">
+          <%= f.label :restaurant %>
+          <br>
+          <%= f.select :restaurant_id, options_from_collection_for_select(Restaurant.all, "id", "name"), :include_blank => "-- Select One --" %>
+        </div>
+    <% end %>
+    <% if params[:type] == 'cater' %>
+        <div class="field">
+          <%= f.label :catering %>
+          <br>
+          <%= f.select :catering_id, options_from_collection_for_select(Catering.all, "id", "name"), :include_blank => "-- Select One --" %>
+        </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+    <button type="reset" value="Reset">Clear</button>
+
+<% end %>
+
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>
+
+    $(function () {
+
+
+        <% if flash[:error] != nil %>
+        hudMsg('error', '<%= flash[:error] %>')
+        <% end %>
+
+        $('#datepicker').datepicker({
+            dateFormat: 'dd-mm-yy',
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "c-70:c"
+        });
+
+        $("#dialog").dialog();
+    });
+</script>

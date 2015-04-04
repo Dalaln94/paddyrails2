@@ -1,0 +1,29 @@
+<h1>Listing moneyinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Startdate</th>
+      <th>Paymenttype</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @moneyinfos.each do |moneyinfo| %>
+      <tr>
+        <td><%= moneyinfo.startdate %></td>
+        <td><%= moneyinfo.paymenttype %></td>
+        <td><%= moneyinfo.user_id %></td>
+        <td><%= link_to 'Show', moneyinfo %></td>
+        <td><%= link_to 'Edit', edit_moneyinfo_path(moneyinfo) %></td>
+        <td><%= link_to 'Destroy', moneyinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Moneyinfo', new_moneyinfo_path %>

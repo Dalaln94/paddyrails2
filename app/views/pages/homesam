@@ -1,0 +1,161 @@
+<!-- START HEAD -->
+<head>
+  
+  <!-- CSSs -->
+  <link rel="stylesheet" id="max-width-1024-css" href="css/max-width-1024.css" type="text/css" media="screen and (max-width: 1240px)" />
+  <link rel="stylesheet" id="max-width-768-css" href="css/max-width-768.css" type="text/css" media="screen and (max-width: 987px)" />
+  <link rel="stylesheet" id="max-width-480-css" href="css/max-width-480.css" type="text/css" media="screen and (max-width: 480px)" />
+  <link rel="stylesheet" id="max-width-320-css" href="css/max-width-320.css" type="text/css" media="screen and (max-width: 320px)" />
+  
+  <!-- CSSs Plugin -->
+  <link rel="stylesheet" id="buttons" href="css/buttons.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="cache-custom-css" href="css/cache-custom.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="custom-css" href="css/custom.css" type="text/css" media="all" />
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+  
+  <!-- FONTs -->
+  <link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Oswald%7CDroid+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%3A300%7CRokkitt%7CShadows+Into+Light%7CAbel%7CDamion%7CMontez&amp;ver=3.4.2" type="text/css" media="all" />
+  <link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='all' />
+  
+  <!-- JAVASCRIPTs -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.aw-showcase.js"></script>
+  <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+  
+</head>
+<!-- END HEAD -->
+<!-- START BODY -->
+<body class="no_js responsive stretched">
+  
+  <!-- START BG SHADOW -->
+  <div class="bg-shadow">
+    
+    <!-- START WRAPPER -->
+    <div id="wrapper" class="group">
+      
+      <!-- START HEADER -->
+      <div id="header" class="group">
+        <div class="logo-group">
+          <%= link_to image_tag("Logo.jpg",:alt=>"E7jizli", :size => "200x130", :class => 'logo').html_safe, root_path%>
+        </div>
+        <div class="group inner">
+          <!-- START LOGO -->
+          
+          <!-- START MAIN NAVIGATION -->
+          <div class="menu classic" id="nav-container">
+            <ul id="nav" class="menu">
+              <li>
+                <a href="index.html">HOME</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="restaurants.html">Restaurants</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="caterings.html">Home Catering</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="bookings.html">Book NOW</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="about.html">About Us</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="#">Random Wheel</a>
+                <ul class="sub-menu">
+                </ul>
+              </li>
+              <li>
+                <a href="#">Add your Restaurant</a>
+                <ul class="sub-menu">
+                  
+                </ul>
+              </li>
+              <!-- END MAIN NAVIGATION -->
+              <div id="header-shadow"></div>
+              <div id="menu-shadow"></div>
+            </div>
+            
+          </div>
+          <!-- END HEADER -->
+        </div>
+        
+        
+        <footer id="footer">
+          <footer>
+            <div class="splitter"></div>
+            <ul>
+              <li>
+                <div class="text">
+                  <h4>About</h4>
+                  <div>E7jizli matches people looking for a place to eat at a restaurant. We provide you with free, real-time reservations. Instead of phoning the restaurant directly you can visit E7jizli hassle free. <a href="#">Read more</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="text">
+                  <h4>Contact</h4>
+                  <div><h2>Contact Form</h2>
+                    
+                    <form class="form">
+                      
+                      <p class="name">
+                      <input type="text" name="name" id="name" placeholder="Dalal Aln" />
+                      <label for="name">Name</label>
+                      </p>
+                      
+                      <p class="email">
+                      <input type="text" name="email" id="email" placeholder="mail@example.com" />
+                      <label for="email">Email</label>
+                      </p>
+                      
+                      <p class="text">
+                      <textarea name="text" placeholder="We'll get back to you ASAP" /></textarea>
+                      </p>
+                      
+                      <p class="submit">
+                      <input type="submit" value="Send" />
+                      </p>
+                    </form></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text">
+                    <h4>Privacy & terms</h4>
+                    <div>Your privacy is very important to us. Please read more about our terms and conditions<a href="#">Read more</a></div>
+                  </div>
+                </li>
+              </ul>
+              
+              <div class="bar">
+                <div class="bar-wrap">
+                  <ul class="links"> <!-- footer menu -->
+                  <div class="copyright">E7jizli | 2014 All Rights Reserved</div>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">License</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Advertise</a></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </footer>
+      </body>
+      <!-- END BODY -->
+    </html>

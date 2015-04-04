@@ -1,0 +1,7 @@
+HI  <%= @user.fname %>,
+
+         Thank you for registering!!!!! Please confirm your registration by clicking on this link
+
+<%= link_to "Confirmation Link", confirm_email_user_url(@user, @user.confirm_token, :host => "localhost:3000") %>
+
+Enjoy E7jizli!!!!!!!! Be happy ok? Ok.

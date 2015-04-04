@@ -1,0 +1,353 @@
+
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-family: 'Rokkitt', 'Droid Sans', 'Verdana', 'Arial', sans-serif;
+	font-size: 12px;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { color: #A05F02; }
+
+/* ===== MAIN LAYOUT ===== */
+html, body { min-height:101% }
+
+body {
+	background-color: #FFFFFF;
+}
+
+footer#innerFooter {
+	padding-bottom: 50px;
+}
+
+img.roundPhoto {
+	border-radius: 150px;
+    height: 250px;
+    width: 250px;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background-color: #FFFFFF;
+	
+}
+
+header h2 {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 44pt;
+	font-weight: bold;
+	margin-top: 20px;
+	color: #fffff;
+	text-shadow: 2px 2px 3px #000;
+}
+
+header div#social {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+.carousel-container {
+    width: 80%;
+}
+#footer
+{
+	clear: both;
+	background: #397DBC;
+	text-align: right;
+	height: 1%;
+}
+#push {
+    clear: both;
+}
+
+#wrapper {
+    /*min-width: 1000px;*/
+}
+
+.boxed #wrapper {
+    background-color: #ffffff;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 20px;
+}
+
+.boxed .bg-shadow {
+    background: url('images/shadows/bg-shadow-boxed.png') repeat-y center top;
+}
+
+.inner {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+
+
+/* ===== HEADER ===== */
+#header {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.page-template-home-php #header, .home #header { margin-bottom: 0px; }
+
+#header-shadow {
+    margin-top: 5px;
+    width: 100%;
+    height: 10px;
+}
+
+.page-template-home-php #header-shadow, .home #header-shadow { display: none; }
+.stretched #header .inner { padding: 0px; }
+
+/* === LOGO */
+#logo {
+    float: center;
+    padding-bottom: 22px;
+}
+
+
+/* === NAVIGATION*/
+.menu-select { display:none; overflow:hidden; position:relative; width:75%; margin:20px auto; }
+.menu-select select { width:100%; border:1px solid #ddd; background:none; -webkit-appearance: none; padding:8px 10px; cursor:pointer; font-family:'Rokkitt', sans-serif; color:#373636; font-size:14px; position:relative; z-index:1; }
+.gecko .menu-select select { width:120%; }
+.menu-select select option { background:none; width:100%; }
+.menu-select .arrow-icon { position:absolute; height:100%; width:100%; background:#d8dbdb url('images/menu-select-arrow.png') no-repeat 95% center; top:0; }
+
+
+#header div.menu { }
+
+#header .menu {
+    height: 28px;
+    padding: 30px 0 0;
+    position: relative;
+}
+
+#header .menu ul {
+    list-style: none;
+    background-color: #fffff; 
+}
+
+#header .menu ul li {
+    position: relative;
+    padding: 0 34px;
+}
+
+#header .menu.classic ul li {
+    padding-bottom:10px;
+}
+
+#ie8 #header .menu ul li {
+    padding: 0 29px;
+}
+
+#header .menu ul li a {
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Rokkitt', 'Georgia', 'Times New Roman', serif;
+    font-size: 11px;
+    text-align: left;
+}
+
+#header .menu ul li a:hover {
+    color: #FFFFFF;
+}
+
+#header .menu > ul {
+    margin: 17px 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 28px;
+    z-index: 99999;
+}
+
+#header .menu.classic > ul {
+    overflow:visible;
+}
+
+#header .menu > ul > li {
+    float: left;
+    height: 28px;
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+}
+
+#header .menu > ul > li > a {
+    font-size: 15px;
+    line-height: 28px;
+    padding-right: 10px;
+}
+
+.twitter-hover {
+	background-image: url(/social/twitter-hover.png);
+}
+
+.facebook-hover {
+	background-image: url(/social/facebook-hover.png);
+}
+
+.google-hover {
+	background-image: url(/social/google-hover.png);
+}
+
+.instagram-hover {
+	background-image: url(/social/instagram-hover.png);
+}
+
+
+.social-slide {
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	cursor: pointer;
+}
+.social-slide:hover {
+	background-position: 0px -48px;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+.demo-button {
+	background: #F35D5C;
+	padding: 11px 17px;
+	color: #FFF;
+	font-size: 15px;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: auto;
+	-moz-transition: all ease 0.2s;
+	-webkit-transition: all ease 0.2s;
+	transition: all ease 0.2s;
+}
+
+.tooltip-example {		
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.tooltip-example > span {
+	text-align: center;
+	color: #000;
+	font-size: 12px;
+	line-height: 1.5;
+	background: #F66867;
+	background-clip: padding-box;
+	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
+	border: 5px solid #111;
+	border-radius: 3px;
+	position: absolute;
+	width: 350px;
+	left: 50%;
+	margin-left: -175px;
+	padding: 10px 0px;
+	bottom: 100%;
+	margin-bottom: 10px;
+	visibility: hidden;
+	opacity:0;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+.tooltip-example > span:before, a > span:after {
+	content: "";
+	position: absolute;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -10px;
+}
+.tooltip-example > span:before {
+	border-top: 10px solid #111;
+	margin-top: 5px;
+}
+.tooltip-example > span:after{
+	border-top: 10px solid #F66867;
+	margin-top: -2px;
+	z-index: 1;
+}
+.tooltip-example:hover > span {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Normal styles for the modal */
+#modal {
+	background:#fff;
+	left:50%;
+	margin:-250px 0 0 -40%;
+	position:absolute;
+	top:-50%;
+	width:80%;
+	border-radius:5px;
+	box-shadow:0 3px 7px rgba(0,0,0,.25);
+	-moz-box-shadow:0 3px 7px rgba(0,0,0,.25);
+	-webkit-box-shadow:0 3px 7px rgba(0,0,0,.25);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+	/* Make the modal appear when targeted */
+	#modal:target {
+		top:50%;
+		transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-webkit-transition: all 0.4s ease-in-out;
+	}
+#modal header,#modal footer {
+	background:#f7f7f7;
+	border-bottom: 1px solid #e7e7e7;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+	#modal footer {
+		border:none;
+		border-top: 1px solid #e7e7e7;
+		border-radius: 0 0 5px 5px;
+		-moz-border-radius: 0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+	}
+#modal section,#modal header, #modal footer {
+	padding:15px;
+	z-index:200;
+}
+#modal h2 {
+	margin:0;
+}
+#modal .btn {
+	float:right;
+}
+
+div#main-content {
+	min-height: 400px;
+}
+
+div.bar-wrap ul li {
+	float: none;
+	display: inline-block;
+}
+
+div.bar-wrap ul.links {
+	float: none;
+	padding: 0;
+}
+

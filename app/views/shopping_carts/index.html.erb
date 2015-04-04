@@ -1,0 +1,11 @@
+<h1>Shopping Cart</h1>
+<%#= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items %>
+<div>
+  <% if @cart.size > 0 %>
+      <% @cart.each do |val| %>
+          <div><h3><%= val %></h3> <a href="javascript:;" onclick="remove_cart('<%= val %>')"><h5>remove</h5></a></div>
+      <% end %>
+  <% else %>
+      <h2>No Items Added yet</h2>
+  <% end %>
+</div>

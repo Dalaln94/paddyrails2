@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+<% p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@", @booking %>
+<p>
+  <strong>Bdatemade:</strong>
+  <%= @booking.bdateMade %>
+</p>
+
+<p>
+  <strong>Numofpeople:</strong>
+  <%= @booking.numofpeople %>
+</p>
+
+<p>
+  <strong>Beventdate:</strong>
+  <%= @booking.beventdate %>
+</p>
+
+<p>
+  <strong>Beventtype:</strong>
+  <%= @booking.beventtype %>
+</p>
+
+<p>
+  <strong>Bstime:</strong>
+  <%= @booking.bstime %>
+</p>
+
+<p>
+  <strong>Bcompleted:</strong>
+  <%= @booking.bcompleted %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @booking.active_status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @booking.user_id %>
+</p>
+
+<% if @booking.restaurant.present? %>
+<p>
+  <strong>Restaurant:</strong>
+  <%= @booking.restaurant.name %>
+</p>
+<% end %>
+
+<% if @booking.catering.present? %>
+<p>
+  <strong>Catering:</strong>
+  <%= @booking.catering.name %>
+</p>
+<% end %>
+<p>
+  <strong>QR:</strong>
+  <%= @booking.load_qrcode %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

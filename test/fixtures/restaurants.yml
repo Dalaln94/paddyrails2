@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  picture: MyString
+  address: MyString
+  lowprice: 1
+  highprice: 1
+  menu: MyString
+
+two:
+  name: MyString
+  picture: MyString
+  address: MyString
+  lowprice: 1
+  highprice: 1
+  menu: MyString

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @catering.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@catering.picture, :size => '100x100') %>
+</p>
+
+<p>
+  <strong>Lowprice:</strong>
+  <%= @catering.lowprice %>
+</p>
+
+<p>
+  <strong>Highprice:</strong>
+  <%= @catering.highprice %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @catering.menu %>
+</p>
+
+<%= link_to 'Edit', edit_catering_path(@catering) %> |
+<%= link_to 'Back', caterings_path %>

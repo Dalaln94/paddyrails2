@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bdateMade: 2014-09-28
+  numofpeople: 1
+  beventdate: 2014-09-28
+  beventtype: MyString
+  bstime: 1
+  bcompleted: MyString
+  active_status: false
+  user_id: 1
+  restaurant_id: 1
+  catering_id: 1
+
+two:
+  bdateMade: 2014-09-28
+  numofpeople: 1
+  beventdate: 2014-09-28
+  beventtype: MyString
+  bstime: 1
+  bcompleted: MyString
+  active_status: false
+  user_id: 1
+  restaurant_id: 1
+  catering_id: 1

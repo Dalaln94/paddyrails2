@@ -1,0 +1,295 @@
+<%= form_for(@menu) do |f| %>
+    <% if @menu.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+          <ul>
+            <% @menu.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :picture %>
+      <br>
+      <%= f.text_field :picture %>
+    </div>
+    <div class="field">
+      <%= f.label :address %>
+      <br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :appetizer_1 %>
+      <br>
+      <%= f.text_field :appetizer_1 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer1 %>
+      <br>
+      <%= f.text_field :PriceAppetizer1 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_2 %>
+      <br>
+      <%= f.text_field :appetizer_2 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer2 %>
+      <br>
+      <%= f.text_field :PriceAppetizer2 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_3 %>
+      <br>
+      <%= f.text_field :appetizer_3 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer3 %>
+      <br>
+      <%= f.text_field :PriceAppetizer3 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_4 %>
+      <br>
+      <%= f.text_field :appetizer_4 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer4 %>
+      <br>
+      <%= f.text_field :PriceAppetizer4 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_5 %>
+      <br>
+      <%= f.text_field :appetizer_5 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer5 %>
+      <br>
+      <%= f.text_field :PriceAppetizer5 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_6 %>
+      <br>
+      <%= f.text_field :appetizer_6 %>
+    </div>
+	    <div class="field">
+      <%= f.label :PriceAppetizer6 %>
+      <br>
+      <%= f.text_field :PriceAppetizer6 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_7 %>
+      <br>
+      <%= f.text_field :appetizer_7 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer7 %>
+      <br>
+      <%= f.text_field :PriceAppetizer7 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :appetizer_8 %>
+      <br>
+      <%= f.text_field :appetizer_8 %>
+    </div>
+	
+	    <div class="field">
+      <%= f.label :PriceAppetizer8 %>
+      <br>
+      <%= f.text_field :PriceAppetizer8 %>
+    </div>
+	
+    <div class="field">
+      <%= f.label :maincourse_1 %>
+      <br>
+      <%= f.text_field :maincourse_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_2 %>
+      <br>
+      <%= f.text_field :maincourse_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_3 %>
+      <br>
+      <%= f.text_field :maincourse_3 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_4 %>
+      <br>
+      <%= f.text_field :maincourse_4 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_5 %>
+      <br>
+      <%= f.text_field :maincourse_5 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_6 %>
+      <br>
+      <%= f.text_field :maincourse_6 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_7 %>
+      <br>
+      <%= f.text_field :maincourse_7 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_8 %>
+      <br>
+      <%= f.text_field :maincourse_8 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_9 %>
+      <br>
+      <%= f.text_field :maincourse_9 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_10 %>
+      <br>
+      <%= f.text_field :maincourse_10 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_11 %>
+      <br>
+      <%= f.text_field :maincourse_11 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_12 %>
+      <br>
+      <%= f.text_field :maincourse_12 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_13 %>
+      <br>
+      <%= f.text_field :maincourse_13 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_14 %>
+      <br>
+      <%= f.text_field :maincourse_14 %>
+    </div>
+    <div class="field">
+      <%= f.label :maincourse_15 %>
+      <br>
+      <%= f.text_field :maincourse_15 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_1 %>
+      <br>
+      <%= f.text_field :dessert_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_2 %>
+      <br>
+      <%= f.text_field :dessert_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_3 %>
+      <br>
+      <%= f.text_field :dessert_3 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_4 %>
+      <br>
+      <%= f.text_field :dessert_4 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_5 %>
+      <br>
+      <%= f.text_field :dessert_5 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_6 %>
+      <br>
+      <%= f.text_field :dessert_6 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_7 %>
+      <br>
+      <%= f.text_field :dessert_7 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_8 %>
+      <br>
+      <%= f.text_field :dessert_8 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_9 %>
+      <br>
+      <%= f.text_field :dessert_9 %>
+    </div>
+    <div class="field">
+      <%= f.label :dessert_10 %>
+      <br>
+      <%= f.text_field :dessert_10 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_1 %>
+      <br>
+      <%= f.text_field :drinks_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_2 %>
+      <br>
+      <%= f.text_field :drinks_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_3 %>
+      <br>
+      <%= f.text_field :drinks_3 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_4 %>
+      <br>
+      <%= f.text_field :drinks_4 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_5 %>
+      <br>
+      <%= f.text_field :drinks_5 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_6 %>
+      <br>
+      <%= f.text_field :drinks_6 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_7 %>
+      <br>
+      <%= f.text_field :drinks_7 %>
+    </div>
+    <div class="field">
+      <%= f.label :drinks_8 %>
+      <br>
+      <%= f.text_field :drinks_8 %>
+      <% if f.object.new_record? %>
+          <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
