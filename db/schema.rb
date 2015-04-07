@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404161714) do
+ActiveRecord::Schema.define(version: 20150404172020) do
 
   create_table "bookings", force: true do |t|
     t.date     "bdateMade"
@@ -47,7 +47,26 @@ ActiveRecord::Schema.define(version: 20150404161714) do
     t.string   "menu"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category"
+    t.string   "manufacturer"
   end
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.string   "picture"
+    t.string   "address"
+    t.integer  "lowprice"
+    t.integer  "highprice"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "manufacturer"
+    t.string   "category"
+  end
+
+  add_index "items", ["category_id"], name: "index_items_on_category_id"
 
   create_table "menus", force: true do |t|
     t.string   "title"
@@ -131,23 +150,6 @@ ActiveRecord::Schema.define(version: 20150404161714) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "restaurants", force: true do |t|
-    t.string   "name"
-    t.string   "picture"
-    t.string   "address"
-    t.integer  "lowprice"
-    t.integer  "highprice"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "category_id"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "manufacturer"
-    t.string   "category"
-  end
-
-  add_index "restaurants", ["category_id"], name: "index_restaurants_on_category_id"
 
   create_table "reviews", force: true do |t|
     t.string   "review"

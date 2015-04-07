@@ -95,14 +95,15 @@
           <ul class="sub-menu"></ul>
         </li>
 		 <li>
-          <a href="/restaurants">Items</a>
+          <a href="/caterings">Items</a>
           <ul class="sub-menu"></ul>
         </li>
 
         <% if @current_user.present? %>
             <% if @current_user.admin? %>
                 <li>
-                  <%= link_to 'Stock', new_restaurant_path %>
+                  <%= link_to 'Add Item', new_catering_path %>
+				  <%= link_to 'Stock' %>
                   <%= link_to 'Customers details', new_catering_path %>
                 </li>
             <% end %>

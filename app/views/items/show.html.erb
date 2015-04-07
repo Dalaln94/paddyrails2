@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@item.picture, :size => '100x100') %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @item.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.lowprice %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @item.manufacturer %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @item.category %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

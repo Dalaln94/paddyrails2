@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :menus
 
-  get 'reviews/restaurant_reviews' => "reviews#restaurant_reviews"
+  get 'reviews/item_reviews' => "reviews#item_reviews"
   resources :reviews
   get "/signin" => "sessions#new"
   get "/signout" => "sessions#destroy"
@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/cart' => "shopping_carts#index"
 
   get 'pages/about'
+  
+  
 
 
   resources :relationships
@@ -38,7 +40,7 @@ Rails.application.routes.draw do
 	end
 
 
-  resources :restaurants
+  resources :items
 
   resources :categories
 
@@ -49,6 +51,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
 
   get 'sessions/destroy'
+  
 
   resources :shopping_carts do
     collection do
@@ -60,7 +63,7 @@ Rails.application.routes.draw do
   #get '/signin', :to => 'sessions#new' #, :as => :signin
   #get '/signout' => 'sessions#destroy', :as => :signout
   #
-  get '/search' => 'restaurants#search', :as => :search
+  get '/search' => 'items#search', :as => :search
 
 
   # The priority is based upon order of creation: first created -> highest priority.
